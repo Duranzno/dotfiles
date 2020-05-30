@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.zprofile: zprofile
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config/i3:
+        path: config/i3/
+        create: true
+
+
