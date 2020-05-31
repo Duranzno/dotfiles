@@ -228,6 +228,7 @@ bindsym $mod+r mode "resize"
 #Start dmenu or rofi (a program launcher)
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id nm-applet
+exec --no-startup-id picom
 
 #Autostart
 bindsym $mod+n exec --no-startup-id networkmanager_dmenudmenu

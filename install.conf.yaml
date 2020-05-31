@@ -25,16 +25,25 @@
     ~/.zshenv: zshenv
     ~/.zshrc:
       force: true
-      path: zshrc
-    ~/.config/i3:
-        path: config/i3/
-        create: true
+      path: zshrc  
     ~/.gitconfig: gitconfig
     ~/.gitconfig_local: gitconfig_local
     ~/.gitmessage: gitmessage
     ~/.gitignore_global: gitignore_global
     ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
-    ~/.config/picom.conf: picom.conf
+    ~/.config/picom.conf: config/picom.conf
+    ~/.config/i3:
+      path: config/i3/
+      create: true
+    ~/.config/alacritty:
+      path: config/alacritty/
+      create: true
+    ~/.config/dunst:
+      path: config/dunst/
+      create: true
+    ~/.config/gtk3.0:
+      path: config/gtk3.0
+      create: true
     ~/.scripts: scripts
 
 - shell:
