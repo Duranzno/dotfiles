@@ -2,6 +2,14 @@
 
 # Don't change. The following determines where Oh-My-Zsh is installed.
 omz=$HOME/.oh-my-zsh
+alias pinggoogle="watch -n 3  ping -avc 5 www.google.com"
+alias myip="curl ifconfig.me"
+alias vpnon="sudo protonvpn c"
+alias vpnoff="sudo protonvpn d"
+alias subl="subl3"
+alias npm-ls="npm list -g --depth=0"
+alias studio="android-studio"
+alias dc="docker-compose"
 
 # My Alias Editing
 alias vim=$EDITOR
