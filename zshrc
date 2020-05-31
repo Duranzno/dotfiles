@@ -1,14 +1,18 @@
-export ZSH="/home/ale/.oh-my-zsh"
-ASDF= /opt/asdf-vm
-ZSH_THEME="agnoster"
-plugins=(git asdf gitfast extract pip vscode web-search yarn copyfile docker mix npm rand-quote sudo)
+# Allow local customizations in the ~/.zshrc_local_before file
+if [ -f ~/.zshrc_local_before ]; then
+    source ~/.zshrc_local_before
+fi
 
-# source $ZSH/oh-my-zsh.sh
+export ZSH=$HOME/.oh-my-zsh
 
+ZSH_THEME="dogenpunk"
 
-alias yolo="commit -m "$(curl -s http://whatthecommit.com/index.txt)""
-# alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias vim=$EDITOR
-alias vv=$EDITOR
-alias i3Conf="$EDITOR ~/.dotfiles/config"
-alias zshConf= "$EDITOR ~/.dotfiles/zshrc"
+plugins=(git asdf youtube-dl  pip   docker zsh-completions zsh-syntax-highlighting)
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+source $ZSH/oh-my-zsh.sh
+
+if [ -f ~/.zshrc_local_after ]; then
+    source ~/.zshrc_local_after
+fi

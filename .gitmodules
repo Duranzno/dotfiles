@@ -1,9 +1,9 @@
 [submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+path = dotbot
+url = https://github.com/anishathalye/dotbot
 [submodule "dotbot-yay"]
-	path = dotbot-yay
-	url = https://github.com/oxson/dotbot-yay
+path = dotbot-yay
+url = https://github.com/oxson/dotbot-yay
 [submodule "dotbot-asdf"]
-	path = dotbot-asdf
-	url = https://github.com/sobolevn/dotbot-asdf.git
+path = dotbot-asdf
+url = https://github.com/sobolevn/dotbot-asdf.git
