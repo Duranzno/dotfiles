@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="dogenpunk"
 
-plugins=(git asdf youtube-dl  pip   docker zsh-completions zsh-syntax-highlighting)
+plugins=(git asdf docker yarn)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 

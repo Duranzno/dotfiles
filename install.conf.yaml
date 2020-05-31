@@ -34,8 +34,8 @@
     ~/.gitmessage: gitmessage
     ~/.gitignore_global: gitignore_global
     ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
-    ~/.oh-my-zsh/custom/plugins/zsh-completions: oh-my-zsh/custom/plugins/zsh-completions/
-    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting/
+    ~/.config/picom.conf: picom.conf
+    ~/.scripts: scripts
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

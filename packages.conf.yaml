@@ -1,5 +1,6 @@
 - yay:
   - xclip
+  - youtube-dl
   # Terminal
   # # - asdf-vm
   # # - tldr

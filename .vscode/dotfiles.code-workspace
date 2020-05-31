@@ -9,5 +9,7 @@
 			"path": "../../Development/dotfiles/"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.defaultLanguage":"shellscript"
+	}
 }
