@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../",
+			"name": "mine"
+		},
+		{
+			"name": "examples",
+			"path": "../../Development/dotfiles/"
+		}
+	],
+	"settings": {}
+}

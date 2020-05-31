@@ -1,0 +1,15 @@
+# vim: set filetype=python:
+
+"""
+Add a reminder to your commit message
+"""
+
+import sys
+msg_file = sys.argv[1]
+with open(msg_file) as f:
+    msg = f.readlines()
+msg.append("""
+## DON'T FORGET!!! Your Dotbot config file was automatically added to the index!\n\n
+""")
+with open(msg_file, 'w') as f:
+    f.writelines(msg)

@@ -1,0 +1,34 @@
+- yay:
+  # Terminal
+  - asdf-vm
+  - tldr
+  - hub
+  - the_silver_searcher
+  - xclip
+  # Linux Desktop
+  - alacritty
+  - docker
+  - docker-compose
+  - dmenu
+  - espanso
+  - i3-gaps
+  - git
+  - neovim
+  - nerd-fonts-fira-code
+  - nerd-fonts-hack
+  - noto-fonts-emoji
+  - noto-fonts-extra
+  - noto-fonts
+  # MultiDesktop
+  - zoom
+  - calibre
+  - chromium
+  - devdocs-desktop
+  - discord
+  - figma-linux
+  - insomnia
+  - insomnia-designer
+  - skypeforlinux-stable-bin
+  - slack-desktop
+  - sublime-text-dev
+  - telegram-desktop
