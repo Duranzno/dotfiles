@@ -81,9 +81,9 @@ font:
   # The italic font face
   italic:
     # family: "Liberation Mono for Powerline Regular"
-    # family: "FiraCode Nerd Font"
+    family: "FiraCode Nerd Font"
     # family: "Source Code Pro"
-    style: "Medium Italic"
+    # style: "Medium Italic"
 
   # Point size of the font
   size: 12.0

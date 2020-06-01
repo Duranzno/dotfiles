@@ -1,6 +1,15 @@
 - yay:
   - xclip
   - youtube-dl
+  - morc_menu
+  # - lazydocker
+  - nitrogen
+  - xfce4-power-manager
+  - pamac-tray
+  - blueman-applet
+  - xautolock
+  - clipit
+  - i3blocks
   # Terminal
   # # - asdf-vm
   # # - tldr

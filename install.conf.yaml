@@ -32,6 +32,7 @@
     ~/.gitignore_global: gitignore_global
     ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
     ~/.config/picom.conf: config/picom.conf
+    ~/.scripts: scripts
     ~/.config/i3:
       path: config/i3/
       create: true
@@ -41,10 +42,21 @@
     ~/.config/dunst:
       path: config/dunst/
       create: true
-    ~/.config/gtk3.0:
-      path: config/gtk3.0
+    ~/.config/gtk-3.0:
+      path: config/gtk-3.0
       create: true
-    ~/.scripts: scripts
+    ~/.config/i3blocks:
+      path: config/i3blocks
+      create: true
+    ~/.config/mpd:
+      path: config/mpd
+      create: true
+    ~/.config/ranger: 
+      path: config/ranger
+      create: true
+    ~/.ncmpcpp/config:
+      path: ncmpcpp/config
+      create: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
