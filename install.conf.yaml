@@ -14,10 +14,11 @@
     - ~/Development
 
 - shell:
-  - [sh pre-install.sh, Running pre installation script]
+  - [sh scripts/pre-install.sh, Running pre installation script]
   - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom forlders]
   - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins forlders]
-  - [if ! hash firebase 2>/dev/null; then npm install -g firebase-tools; fi, Installing Firebase CLI]
+  - [if ! hash firebase 2>/dev/null; then yarn global add firebase-tools; fi, Installing Firebase CLI]
+  - [if ! hash cypress 2>/dev/null; then yarn global add cypress; fi, Installing Cypress]
 
 
 - link:
@@ -54,9 +55,16 @@
     ~/.config/ranger: 
       path: config/ranger
       create: true
+    ~/.config/polybar: 
+      path: config/polybar
+      create: true
+    ~/.config/rofi: 
+      path: config/rofi
+      create: true
     ~/.ncmpcpp/config:
       path: ncmpcpp/config
       create: true
+      
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

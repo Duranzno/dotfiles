@@ -128,11 +128,11 @@ set $ws1 "1: Home"
 set $ws2 "2: Code"
 set $ws3 "3: Chrome"
 set $ws4 "4: Chat"
-set $ws5 "5: "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws5 "5: 5"
+set $ws6 "6: 6"
+set $ws7 "7: 7"
+set $ws8 "8: 8"
+set $ws9 "9: 9"
 
 workspace $ws1 output $mon1
 workspace $ws2 output $mon1
@@ -140,8 +140,8 @@ workspace $ws3 output $mon1
 workspace $ws4 output $mon1
 workspace $ws5 output $mon1
 workspace $ws6 output $mon1
-workspace $ws7 output $mon1
-workspace $ws8 output $mon1
+workspace $ws7 output $mon2
+workspace $ws8 output $mon2
 workspace $ws9 output $mon2
 
 # switch to workspace
@@ -258,15 +258,19 @@ bindsym $mod+r mode "resize"
 #Start dmenu or rofi (a program launcher)
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # exec --no-startup-id nm-applet
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id QuickWall --seach City --random
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+# exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id pamac-tray
+exec ~/.config/polybar/launch.sh
 exec --no-startup-id clipit
-exec --no-startup-id blueman-applet
-exec --no-startup-id volumeicon
+# exec --no-startup-id blueman-applet
+exec --no-startup-id ~/.scripts/two-screen-layout.sh
+# exec --no-startup-id volumeicon
 exec --no-startup-id xautolock -time 10 -locker blurlock
+exec_always --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
 
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -382,34 +386,6 @@ set $nord13  #EBCB8B
 set $nord14  #A3BE8C
 set $nord15  #B48EAD
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command SCRIPT_DIR=~/.config/i3blocks i3blocks
-	position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
-
-    colors {
-        background #3B4252
-        statusline #ECEFF4
-        separator  #81A1C1
-
-#                      border  backgr. text
-        focused_workspace  #81A1C1 #2E3440 #ECEFF4
-        active_workspace   #81A1C1 #2E3440 #ECEFF4
-        inactive_workspace #3B4252 #3B4252 #ECEFF4
-        binding_mode       #D08770 #3B4252 #ECEFF4
-        urgent_workspace   #D08770 #D08770 #ECEFF4
-    }
-}
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
@@ -479,6 +455,3 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-# Custom
-exec_always --no-startup-id xinput --set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
