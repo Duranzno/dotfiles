@@ -75,7 +75,7 @@ font:
   # The bold font face
   bold:
     # family: "Liberation Mono for Powerline Regular"
-    family: "FiraCode Nerd Font Bold"
+    family: "FiraCode Nerd Font"
     # family: "Source Code Pro Bold"
 
   # The italic font face =>

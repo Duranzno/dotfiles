@@ -33,6 +33,7 @@
     ~/.gitignore_global: gitignore_global
     ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
     ~/.config/picom.conf: config/picom.conf
+    ~/.tmux.conf: tmux.conf
     ~/.scripts: scripts
     ~/.config/i3:
       path: config/i3/
