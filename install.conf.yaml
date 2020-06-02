@@ -18,6 +18,7 @@
   - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom forlders]
   - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins forlders]
   - [if ! hash firebase 2>/dev/null; then yarn global add firebase-tools; fi, Installing Firebase CLI]
+  - [if ! hash apollo 2>/dev/null; then yarn global add apollo; fi, Installing apollo CLI]
   - [if ! hash cypress 2>/dev/null; then yarn global add cypress; fi, Installing Cypress]
 
 
@@ -64,9 +65,7 @@
       create: true
     ~/.ncmpcpp/config:
       path: ncmpcpp/config
-      create: true
       
-
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
