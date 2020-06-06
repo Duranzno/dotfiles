@@ -20,6 +20,7 @@
   - [if ! hash firebase 2>/dev/null; then yarn global add firebase-tools; fi, Installing Firebase CLI]
   - [if ! hash apollo 2>/dev/null; then yarn global add apollo; fi, Installing apollo CLI]
   - [if ! hash cypress 2>/dev/null; then yarn global add cypress; fi, Installing Cypress]
+  - [if ! hash heroku 2>/dev/null; then yarn global add heroku; fi, Installing heroku]
 
 
 - link:
@@ -34,6 +35,7 @@
     ~/.gitignore_global: gitignore_global
     ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
     ~/.config/picom.conf: config/picom.conf
+    ~/.config/nvim/init.vim: init.vim
     ~/.tmux.conf: tmux.conf
     ~/.scripts: scripts
     ~/.config/i3:
@@ -68,29 +70,55 @@
       
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  # - [, "Installing PLug"]
+  - [bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring, fixing asdf node PGP permissions]
 
 
-# - asdf:
-#   - plugin: java
-#     url: https://github.com/halcyon/asdf-java.git
-#     global: 8
-#   - plugin: nodejs
-#     url: https://github.com/asdf-vm/asdf-nodejs.git
-#     global: 14
-#   - plugin: erlang
-#     url: https://github.com/asdf-vm/asdf-erlang.git
-#   - plugin: elixir
-#     url: https://github.com/asdf-vm/asdf-elixir.git
-#   - plugin: hub
-#     url: https://github.com/vixus0/asdf-hub.git
-#   - plugin: kotlin
-#     url: https://github.com/missingcharacter/asdf-kotlin
-#     versions:
-#       - latest
-#   - plugin: go
-#     url: https://github.com/kennyp/asdf-golang
-#   - plugin: python
-#     url: https://github.com/danhper/asdf-python
-#     global: 3.8
-#   - plugin: yarn
-#     url: https://github.com/twuni/asdf-yarn
+- asdf:
+  - plugin: java
+    url: https://github.com/halcyon/asdf-java.git
+    global: 8
+    versions:
+      - 8
+  - plugin: nodejs
+    url: https://github.com/asdf-vm/asdf-nodejs.git
+    global: latest
+    versions:
+      - latest
+      - 10
+  - plugin: erlang
+    url: https://github.com/asdf-vm/asdf-erlang.git
+    global: latest
+    versions:
+      - latest
+  - plugin: elixir
+    url: https://github.com/asdf-vm/asdf-elixir.git
+    global: latest
+    versions:
+      - latest
+  - plugin: hub
+    global: latest
+    versions:
+      - latest
+    url: https://github.com/vixus0/asdf-hub.git
+  - plugin: kotlin
+    global: latest
+    url: https://github.com/missingcharacter/asdf-kotlin
+    versions:
+      - latest
+  - plugin: go
+    global: latest
+    url: https://github.com/kennyp/asdf-golang
+    versions:
+      - latest
+  - plugin: python
+    url: https://github.com/danhper/asdf-python
+    versions:
+      - latest
+    global: 3.8
+  # - plugin: yarn
+  #   global: latest
+  #   url: https://github.com/twuni/asdf-yarn
+  #   versions:
+  #     - latest
+ 

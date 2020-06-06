@@ -60,7 +60,7 @@ alias coffee='VALUE=$( cat ~/.cupsocoffee ) ; VALUE=$(( $VALUE + 1 )); echo $VAL
 
 
 # Update Vim plugins
-# alias vim-plugin-update="vim +PluginUpdate +qall"
-
+alias vim-plugin-update="vim +PluginUpdate +qall"
+alias viedit="vim ~/config/nvim/init.vim"
 # alias conda_activate='export PATH="$HOME/anaconda/bin:$PATH"'
 

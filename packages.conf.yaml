@@ -9,7 +9,8 @@
   - blueman-applet
   - xautolock
   - clipit
-  - i3blocks
+  - heroku-cli
+  # - i3blocks
   # Terminal
   # # - asdf-vm
   # # - tldr

@@ -31,7 +31,7 @@ window:
     y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -56,11 +56,11 @@ window:
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
   # disable scrolling.
-  history: 0
+  history: 1000
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
+  multiplier: 1
 
 # Font configuration (changes require restart)
 font:
@@ -86,7 +86,7 @@ font:
     # style: "Medium Italic"
 
   # Point size of the font
-  size: 11.0
+  size: 10.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -118,7 +118,7 @@ font:
   use_thin_strokes: true
 
 # When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
@@ -156,11 +156,11 @@ colors:
   # primary:
   #   background: '0x000000'
   #   foreground: '0xeaeaea'
-  #
+  
   # cursor:
   #   text: '0x000000'
   #   cursor: '0xffffff'
-  #
+  
   # normal:
   #   black:   '0x000000'
   #   red:     '0xd54e53'
@@ -170,7 +170,7 @@ colors:
   #   magenta: '0xc397d8'
   #   cyan:    '0x70c0ba'
   #   white:   '0xffffff'
-  #
+  
   # bright:
   #   black:   '0x666666'
   #   red:     '0xff3334'
@@ -219,7 +219,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 1.0
+background_opacity: 1
 
 # Key bindings
 #
@@ -363,8 +363,6 @@ key_bindings:
   - { key: F6, chars: "\x1b[17~" }
   - { key: F7, chars: "\x1b[18~" }
   - { key: F8, chars: "\x1b[19~" }
-  - { key: F9, chars: "\x1b[20~" }
-  - { key: F10, chars: "\x1b[21~" }
   - { key: F11, chars: "\x1b[23~" }
   - { key: F12, chars: "\x1b[24~" }
   - { key: Back, chars: "\x7f" }
@@ -414,7 +412,7 @@ selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 # Mouse bindings
 #
@@ -447,7 +445,7 @@ cursor:
   # window is not focused.
   unfocused_hollow: true
 
-# dynamic_title: false
+dynamic_title: true
 
 # Live config reload (changes require restart)
 live_config_reload: true

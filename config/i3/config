@@ -262,6 +262,7 @@ bindsym $mod+r mode "resize"
 # exec --no-startup-id QuickWall --seach City --random
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
+exec --no-startup-id ToggleDesktop
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 exec ~/.config/polybar/launch.sh
