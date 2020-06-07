@@ -19,11 +19,3 @@ if [ ! -d "$ASDFDIR" ]; then
 else
   echo 'asdf installed'
 fi
-
-# Change default shell
-# if [$0 != "zsh"|| $0 = "/usr/bin/zsh"]; then
-#   echo 'Changing default shell to zsh'
-#   chsh -s /bin/zsh
-# else
-#   echo 'Already using zsh'
-# fi

@@ -4,121 +4,114 @@
       relink: true
     shell:
       stderr: true
-    asdf:
-      global: latest
-      versions: 
-        - latest
-- clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
+    # asdf:
+      # global: latest
+      # versions: 
+        # - latest
+# - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
 - create:
     - ~/Development
+    - ~/.config
 
 - shell:
   - [sh scripts/pre-install.sh, Running pre installation script]
-  - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom forlders]
-  - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins forlders]
-  - [if ! hash firebase 2>/dev/null; then yarn global add firebase-tools; fi, Installing Firebase CLI]
-  - [if ! hash apollo 2>/dev/null; then yarn global add apollo; fi, Installing apollo CLI]
-  - [if ! hash cypress 2>/dev/null; then yarn global add cypress; fi, Installing Cypress]
-  - [if ! hash heroku 2>/dev/null; then yarn global add heroku; fi, Installing heroku]
+
+# Installing NPM Global Packages
+# - shell: 
+#   - [if ! hash firebase 2>/dev/null; then yarn global add firebase-tools; fi, Installing Firebase CLI]
+#   - [if ! hash apollo 2>/dev/null; then yarn global add apollo; fi, Installing apollo CLI]
+#   - [if ! hash cypress 2>/dev/null; then yarn global add cypress; fi, Installing Cypress]
+#   - [if ! hash heroku 2>/dev/null; then yarn global  add heroku; fi, Installing heroku]
 
 
 - link:
+    # CONFIG
+    ~/.config/alacritty: alacritty
+    ~/.config/dunst: dunst
+    ~/.config/espanso: espanso
+    ~/.config/fontconfig: fontconfig
+    ~/.config/gitconfig: git
+    ~/.config/gtk-3.0: gtk-3.0
+    ~/.config/i3: i3
+    ~/.config/mpd: mpd
+    ~/.config/nvim: nvim
+    ~/.config/picom: picom
+    ~/.config/polybar: polybar
+    ~/.config/rofi: rofi
+    ~/.config/sxhkd: sxhkd
+    ~/.config/X11: X11
+    ~/.config/zathura: zathura
+    ~/.config/zsh: zsh
+    # Others
+    ~/.scripts: scripts
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.aliasrc: aliasrc
+    ~/.aliasrc: aliasrc
+    ~/.profile: profile
+    ~/.fehbg: fehbg
+    # ~/.tool-versions: tool-versions
+    ~/.gitconfig: gitconfig
+    # X11
+    ~/.xinitrc: xinitrc
+    ~/.xprofile: xprofile
+    ~/.xinitrc: xinitrc
+    # ZSH
+    ~/.zshrc: zshrc
     ~/.zprofile: zprofile
     ~/.zshenv: zshenv
-    ~/.zshrc:
-      force: true
-      path: zshrc  
-    ~/.gitconfig: gitconfig
-    ~/.gitconfig_local: gitconfig_local
-    ~/.gitmessage: gitmessage
-    ~/.gitignore_global: gitignore_global
-    ~/.oh-my-zsh/custom/my-aliases.zsh: oh-my-zsh/custom/my-aliases.zsh
-    ~/.config/picom.conf: config/picom.conf
-    ~/.config/nvim/init.vim: init.vim
-    ~/.tmux.conf: tmux.conf
-    ~/.scripts: scripts
-    ~/.config/i3:
-      path: config/i3/
-      create: true
-    ~/.config/alacritty:
-      path: config/alacritty/
-      create: true
-    ~/.config/dunst:
-      path: config/dunst/
-      create: true
-    ~/.config/gtk-3.0:
-      path: config/gtk-3.0
-      create: true
-    ~/.config/i3blocks:
-      path: config/i3blocks
-      create: true
-    ~/.config/mpd:
-      path: config/mpd
-      create: true
-    ~/.config/ranger: 
-      path: config/ranger
-      create: true
-    ~/.config/polybar: 
-      path: config/polybar
-      create: true
-    ~/.config/rofi: 
-      path: config/rofi
-      create: true
-    ~/.ncmpcpp/config:
-      path: ncmpcpp/config
-      
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  # - [, "Installing PLug"]
-  - [bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring, fixing asdf node PGP permissions]
+    
+  
+  # - shell:
+  # - [git submodule update --init --recursive, Installing submodules]
+  # - [bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring, fixing asdf node PGP permissions]
 
 
-- asdf:
-  - plugin: java
-    url: https://github.com/halcyon/asdf-java.git
-    global: 8
-    versions:
-      - 8
-  - plugin: nodejs
-    url: https://github.com/asdf-vm/asdf-nodejs.git
-    global: latest
-    versions:
-      - latest
-      - 10
-  - plugin: erlang
-    url: https://github.com/asdf-vm/asdf-erlang.git
-    global: latest
-    versions:
-      - latest
-  - plugin: elixir
-    url: https://github.com/asdf-vm/asdf-elixir.git
-    global: latest
-    versions:
-      - latest
-  - plugin: hub
-    global: latest
-    versions:
-      - latest
-    url: https://github.com/vixus0/asdf-hub.git
-  - plugin: kotlin
-    global: latest
-    url: https://github.com/missingcharacter/asdf-kotlin
-    versions:
-      - latest
-  - plugin: go
-    global: latest
-    url: https://github.com/kennyp/asdf-golang
-    versions:
-      - latest
-  - plugin: python
-    url: https://github.com/danhper/asdf-python
-    versions:
-      - latest
-    global: 3.8
-  # - plugin: yarn
-  #   global: latest
-  #   url: https://github.com/twuni/asdf-yarn
-  #   versions:
-  #     - latest
+# - asdf:
+#   - plugin: java
+#     url: https://github.com/halcyon/asdf-java.git
+#     global: 8
+#     versions:
+#       - 8
+#   - plugin: nodejs
+#     url: https://github.com/asdf-vm/asdf-nodejs.git
+#     global: latest
+#     versions:
+#       - latest
+#       # - 10
+#   - plugin: erlang
+#     url: https://github.com/asdf-vm/asdf-erlang.git
+#     global: latest
+#     versions:
+#       - latest
+#   - plugin: elixir
+#     url: https://github.com/asdf-vm/asdf-elixir.git
+#     global: latest
+#     versions:
+#       - latest
+#   - plugin: hub
+#     global: latest
+#     versions:
+#       - latest
+#     url: https://github.com/vixus0/asdf-hub.git
+#   - plugin: kotlin
+#     global: latest
+#     url: https://github.com/missingcharacter/asdf-kotlin
+#     versions:
+#       - latest
+#   - plugin: go
+#     global: latest
+#     url: https://github.com/kennyp/asdf-golang
+#     versions:
+#       - latest
+#   - plugin: python
+#     url: https://github.com/danhper/asdf-python
+#     versions:
+#       - latest
+#     global: 3.8
+#   # - plugin: yarn
+#   #   global: latest
+#   #   url: https://github.com/twuni/asdf-yarn
+#   #   versions:
+#   #     - latest
  

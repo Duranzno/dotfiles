@@ -1,0 +1,7 @@
+
+source $ZSH/
+
+
+. $HOME/.asdf/asdf.sh
+
+

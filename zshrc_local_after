@@ -1,5 +1,0 @@
-
-source $ZSH/custom/my-aliases.zsh
-
-
-. $HOME/.asdf/asdf.sh
