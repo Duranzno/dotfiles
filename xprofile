@@ -10,5 +10,7 @@
 # unclutter &		# Remove mouse when idle
 # xcompmgr &		# xcompmgr for transparency
 $HOME/.fehbg
+picom &
+espanso &
 dunst &			# dunst for notifications
 xrdb $HOME/.config/X11/Xresources &
