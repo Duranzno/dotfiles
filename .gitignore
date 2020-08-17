@@ -1,0 +1,4 @@
+.vscode
+nvim/plugged/*
+nvim/plugged
+nvim/plugged/

@@ -12,4 +12,9 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-asdf -c "${CONFIG}" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
+  -d "${BASEDIR}"\
+  -p "${BASEDIR}/dotbot-yarn/yarn.py" \
+  -p "${BASEDIR}/dotbot-pacaur/pacaur.py" \
+  -p "${BASEDIR}/dotbot-espanso/espanso.py" \
+  -c "${CONFIG}" "${@}"
