@@ -19,7 +19,7 @@
     - z
     - ripgrep
     - alacritty
-    - nvim
+    - neovim
     - picom
     - tmux
     - npm
@@ -37,11 +37,8 @@
     ~/.config/fontconfig: fontconfig
     ~/.config/gitconfig: git
     # ~/.config/gtk-3.0: gtk-3.0
-    ~/.config/i3: i3
-    ~/.config/mpd: mpd
     ~/.config/nvim: nvim
     ~/.config/picom: picom
-    ~/.config/polybar: polybar
     ~/.config/rofi: rofi
     ~/.config/sxhkd: sxhkd
     ~/.config/X11: X11
