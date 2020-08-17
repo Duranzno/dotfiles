@@ -17,6 +17,7 @@
 - pacaur:
     - nodejs
     - z
+    - ripgrep
     - alacritty
     - nvim
     - picom

@@ -10,3 +10,9 @@
 [submodule "dotbot-espanso"]
 	path = dotbot-espanso
 	url = https://github.com/duranzno/dotbot-espanso.git
+[submodule "dotbot-asdf"]
+path = dotbot-asdf
+url = https://github.com/sobolevn/dotbot-asdf.git
+[submodule "dotbot-yay"]
+path = dotbot-yay
+url = https://github.com/oxson/dotbot-yay
