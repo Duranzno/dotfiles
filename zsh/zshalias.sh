@@ -36,3 +36,4 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim fo
 vf() { fzf | xargs -r -I % $EDITOR % ;}
 alias protonvpn=sudo ./.asdf/installs/python/3.8.3/bin/protonvpn
 alias sudo=sudo -E
+

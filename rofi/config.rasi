@@ -1,4 +1,5 @@
 configuration {
+  modi: "window,run,ssh,drun";
   show-icons: true;
   icon-theme: "Vimix-Beryl";
   drun-display-format: "{icon} {name}";

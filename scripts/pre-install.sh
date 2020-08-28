@@ -19,3 +19,12 @@ if [ ! -d "$ASDFDIR" ]; then
 else
   echo 'asdf installed'
 fi
+
+#Preparing NPM to install global packages locally to the user
+NPMDIR="${HOME}/.npm-packages"
+if [ ! -d "$NPMDIR" ]; then
+  echo 'Setting up npm packages'
+  mkdir $NPMDIR
+  npm config set prefix $NPMDIR
+fi
+

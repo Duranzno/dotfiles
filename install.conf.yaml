@@ -15,52 +15,54 @@
     - ~/.config
 
 - pacaur:
-    - nodejs
-    - z
-    - ripgrep
-    - alacritty
-    - neovim
-    - picom
-    - tmux
-    - npm
-    - espanso-bin
+    - nodejs # Javascript REPL
+    - npm #Node PackageManager
+    - z # Better cd (to change directories)
+    - ripgrep #Search files everywhere
+    - neovim #Terminal Editor
+    # - picom #Transparency Program
+    - tmux #Multiplexer
+    - espanso-bin #Text Expander
+    - neovim #Editor
+    - tdrop-git #Dropdowner
+    # - tmuxinator # Create and manage tmux sessions easily.
+    - sxhkd # Keyboard shortcuts
 
 - shell:
     - [sh scripts/pre-install.sh, Running pre installation script]
     - [npm i -g yarn, Running pre installation script]
-
 - link:
     # CONFIG
-    ~/.config/alacritty: alacritty
-    ~/.config/dunst: dunst
-    ~/.config/espanso: espanso
-    ~/.config/fontconfig: fontconfig
-    ~/.config/gitconfig: git
-    # ~/.config/gtk-3.0: gtk-3.0
-    ~/.config/nvim: nvim
-    ~/.config/picom: picom
+    #     ~/.config/alacritty: alacritty
+    #     ~/.config/dunst: dunst
+    #     ~/.config/espanso: espanso
+    #     ~/.config/fontconfig: fontconfig
+    #     ~/.config/gitconfig: git
+    #     # ~/.config/gtk-3.0: gtk-3.0
+    #     ~/.config/nvim: nvim
+    #     ~/.config/picom: picom
     ~/.config/rofi: rofi
     ~/.config/sxhkd: sxhkd
-    ~/.config/X11: X11
-    ~/.config/zathura: zathura
-    ~/.config/zsh: zsh
-    # Others
-    ~/.scripts: scripts
-    ~/.tmux.conf: tmux/tmux.conf
-    # ~/.aliasrc: aliasrc
-    # ~/.profile: profile
-    ~/.tool-versions: tool-versions
-    ~/.gitconfig: gitconfig
-    # X11
-    # ~/.xinitrc: xinitrc
-    ~/.xprofile: xprofile
-    # ZSH
-    ~/.zshrc: zshrc
-    ~/.zprofile: zprofile
-    ~/.zshenv: zshenv
-  # - shell:
-  # - [git submodule update --init --recursive, Installing submodules]
-  # - [bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring, fixing asdf node PGP permissions]
+#     ~/.config/X11: X11
+#     ~/.config/zathura: zathura
+#     ~/.config/zsh: zsh
+#     # Others
+#     ~/.scripts: scripts
+#     ~/.tmux.conf: tmux/tmux.conf
+#     # ~/.aliasrc: aliasrc
+#     # ~/.profile: profile
+#     ~/.tool-versions: tool-versions
+#     ~/.gitconfig: gitconfig
+#     # X11
+#     # ~/.xinitrc: xinitrc
+#     ~/.xprofile: xprofile
+#     # ZSH
+#     ~/.zshrc: zshrc
+#     ~/.zprofile: zprofile
+#     ~/.zshenv: zshenv
+# - shell:
+# - [git submodule update --init --recursive, Installing submodules]
+# - [bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring, fixing asdf node PGP permissions]
 # - asdf:
 #   - plugin: java
 #     url: https://github.com/halcyon/asdf-java.git
@@ -119,11 +121,11 @@
 #     - cypress
 #     - gitmoji
 
-# - espanso:
-#     - wttr
-#     - all-emojis
-#     - lorem
-#     - arrows
-#     - cht
-#     - ip
-#     - gitmojis
+- espanso:
+    - wttr
+    - all-emojis
+    - lorem
+    - arrows
+    - cht
+    - ip
+    - gitmojis
