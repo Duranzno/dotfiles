@@ -32,7 +32,7 @@ if [ -v CONTAINER_NAME ]; then
   echo "STARTING TO USE" $CONTAINER_NAME
   source /opt/ros/${ROS_DISTRO}/setup.zsh
 else
-  source /opt/ros/noetic/setup.zsh
-  source /home/alejandro/catkin_ws/devel/setup.zsh
+#  source /opt/ros/noetic/setup.zsh
+#  source /home/alejandro/catkin_ws/devel/setup.zsh
 fi
 

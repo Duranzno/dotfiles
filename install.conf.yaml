@@ -25,6 +25,7 @@
     - espanso-bin #Text Expander
     - neovim #Editor
     - tdrop-git #Dropdowner
+    - diff-so-fancy
     # - tmuxinator # Create and manage tmux sessions easily.
     - sxhkd # Keyboard shortcuts
 
