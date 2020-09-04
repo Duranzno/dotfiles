@@ -37,3 +37,4 @@ else
 fi
 source ~/.config/zsh/autocompletion.sh
 
+ 
