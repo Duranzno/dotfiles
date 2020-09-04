@@ -27,7 +27,10 @@
     - tdrop-git #Dropdowner
     - diff-so-fancy
     # - tmuxinator # Create and manage tmux sessions easily.
+    - act # For running Github Actions locally
+    - github-cli # Github cli
     - sxhkd # Keyboard shortcuts
+    - hub # Github Hub cli
 
 - shell:
     - [sh scripts/pre-install.sh, Running pre installation script]

@@ -35,4 +35,6 @@ else
 #  source /opt/ros/noetic/setup.zsh
 #  source /home/alejandro/catkin_ws/devel/setup.zsh
 fi
+source ~/.config/zsh/autocompletion.sh
 
+ 
