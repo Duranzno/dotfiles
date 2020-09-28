@@ -1,0 +1,13 @@
+[user]
+	name = Alejandro D
+	email = aledurax@gmail.com
+
+[github]
+	user = duranzno
+[core]
+	excludesfile = ~/.gitignore
+	precomposeUnicode = true
+[pager]
+	# insanely beautiful diffs ==> npm install -g diff-so-fancy
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX

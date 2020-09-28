@@ -1,0 +1,43 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stderr: true
+    asdf:
+      global: latest
+      versions:
+        - latest
+
+- create:
+    - ~/Development
+    - ~/.config
+
+- link:
+    ~/.config/espanso: espanso
+    ~/.aliases: .aliases
+    ~/.asdfrc: .asdfrc
+    ~/.gitconfig: .gitconfig
+    ~/.zshrc: .zshrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.scripts: scripts
+# - yarn:
+#     - trash-cli
+#     - create-react-native-app
+#     - create-react-app
+#     - heroku
+#     - peerflix
+#     - vercel
+#     - gatsby
+#     - readme-md-generator
+#     - gitmoji
+#     - cypress
+
+# - espanso:
+#     - wttr
+#     - all-emojis
+#     - lorem
+#     - arrows
+#     - cht
+#     - ip
+#     - gitmojis
