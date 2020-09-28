@@ -56,7 +56,7 @@ else
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 	log_info "Installing zsh-syntax-highlighting plugin"
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting --depth 1 
 fi
 
 # add fonts for powerline
@@ -108,16 +108,8 @@ if [ -n "$MACOS" ]; then
 fi
 
 # dynamically symlink all config/dotfiles to home directory
-shellcheck source=../install.sh
+# shellcheck source=../install.sh
 # source "$(dirname "$0")/symlink-dotfiles.bash"
 
 sudo apt install -y nodejs yarn
 log_info "🏁  Fin"
-
-# setup git config
-# log_warning "Do not forget to run:"
-# log_info "git config --global user.name <your name>"
-# log_info "git config --global user.email <your@email.com>"
-# log_info "git config --global core.editor <editor of choice>"
-# log_info "git config credential.helper store"
-# log_info "git config --global credential.helper 'cache --timeout 7200'"

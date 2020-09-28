@@ -40,7 +40,15 @@ function asdf_plugin_setup() {
 			log_failure_and_exit "Script only supports macOS and Ubuntu"
 		fi
 	fi
-
+	if [[ "${plugin_name}" == "erlang" ]]; then
+			if [ -n "$LINUX" ]; then
+				sudo apt-get update
+				sudo apt-get install --no-install-recommends \
+					libncurses5-dev
+			else
+				log_failure_and_exit "Script only supports macOS and Ubuntu"
+			fi
+		fi
 	asdf plugin add "${plugin_name}" || true
 	# TODO: fix so a more precise check of output is performed
 	#

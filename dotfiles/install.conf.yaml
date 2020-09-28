@@ -15,12 +15,13 @@
 
 - link:
     ~/.config/espanso: espanso
+    ~/.scripts: scripts
     ~/.aliases: .aliases
     ~/.asdfrc: .asdfrc
     ~/.gitconfig: .gitconfig
     ~/.zshrc: .zshrc
     ~/.tmux.conf: .tmux.conf
-    ~/.scripts: scripts
+    ~/.config/starship.toml: starship.toml
 # - yarn:
 #     - trash-cli
 #     - create-react-native-app

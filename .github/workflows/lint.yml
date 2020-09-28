@@ -21,4 +21,4 @@ jobs:
           SHELLCHECK_OPTS: -e SC1091
         with:
           check_together: "yes"
-          ignore: ".examples ^dir/example.sh"
+          ignore: "examples"

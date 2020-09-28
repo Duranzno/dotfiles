@@ -4,7 +4,8 @@ set -euo pipefail
 
 # install from apt
 sudo apt install git curl tar apt-transport-https gnome-tweaks -y
-
+sudo apt install -y \
+	alacritty 
 # VSCode
 sudo snap install code --classic
 
