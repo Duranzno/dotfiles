@@ -3,9 +3,12 @@
 
 matches:
   # Simple text replacement
-  # - trigger: ":espanso"
-  #   replace: "Hi there!"
-
+  - trigger: ':"":'
+    replace: "“”"
+  - trigger: ":a"
+    replace: "á"
+  - trigger: ":n"
+    replace: "ñ"
   # Dates
   # - trigger: ":date"
   #   replace: "{{mydate}}"

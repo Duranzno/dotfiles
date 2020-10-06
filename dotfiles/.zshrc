@@ -46,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # see 'man strftime' for details.
 HIST_STAMPS="mm/dd/yyyy"
 
-printf "✅  %s\\n" "Source asdf completions prior to oh-my-zsh running it's own compinit."
+[[ ! -v TMUX ]] && printf "✅  %s\\n" "Source asdf completions prior to oh-my-zsh running it's own compinit."
 # shellcheck disable=SC2206
 fpath=($HOME/.asdf/completions $fpath)
 
@@ -113,7 +113,7 @@ add_path_to_global_path() {
 	[[ ":$PATH:" == *":${TO_ADD}:"* ]] && PATH="${PATH//$TO_ADD:/}"
 	# add to PATH
 	PATH="${TO_ADD}:$PATH"
-	printf "✅  added to global path:\\t%s\\n" "$1"
+	# printf "✅  added to global path:\\t%s\\n" "$1"
 }
 
 # Will source the provided resource if the resource exists
@@ -121,9 +121,9 @@ source_if_exists() {
 	if [ -f "$1" ]; then
 		# shellcheck disable=SC1090
 		. "$1"
-		printf "✅  Sourced:\\t%s\\n" "$1"
+		[[ ! -v TMUX ]] && printf "✅  Sourced:\\t%s\\n" "$1"
 	else
-		printf "🚨  Failed to source: %s\\n" "$1"
+		[[ ! -v TMUX ]] && printf "🚨  Failed to source: %s\\n" "$1"
 	fi
 }
 
@@ -138,16 +138,20 @@ source_if_exists "$HOME/z.sh"
 
 ### asdf plugins
 #### JAVA_HOME
-source_if_exists "$HOME/.asdf/plugins/java/set-java-home.sh"
+# source_if_exists "$HOME/.asdf/plugins/java/set-java-home.sh"
 
 ### aliases
 source_if_exists "$HOME/.aliases"
+export ANDROID_HOME=$HOME/Android/Sdk
+add_path_to_global_path  "$ANDROID_HOME/emulator"
+add_path_to_global_path  "$ANDROID_HOME/tools"
+add_path_to_global_path  "$ANDROID_HOME/tools/bin"
+add_path_to_global_path  "$ANDROID_HOME/platform-tools"
 
-### VSCode
-# WIP. See here for now - https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
-# add_path_to_global_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
+# export ANDROID_AVD_HOME=/Users/{{your user}}/.android/avd
 add_path_to_global_path "$(yarn global bin)"
+add_path_to_global_path "/opt/android-studio/bin"
+add_path_to_global_path "/opt/flutter/bin"
 
 # shellcheck disable=SC1090
 [ "$(uname -s)" = "Darwin" ] &&
@@ -155,7 +159,7 @@ add_path_to_global_path "$(yarn global bin)"
 	source <(navi widget zsh)
 
 ### https://starship.rs
-printf "%s\\n" "🚀  Load Starship shell prompt"
+[[ ! -v TMUX ]] &&  printf "%s\\n" "🚀  Load Starship shell prompt"
 eval "$(starship init zsh)"
 
 # printf "\\n🏞  Environment Variables: \\n\\n"

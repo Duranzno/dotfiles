@@ -1,7 +1,8 @@
 .vscode
-nvim/plugged/*
-nvim/plugged
-nvim/plugged/
+dotfiles/nvim/plugged/*
+dotfiles/nvim/plugged
+dotfiles/nvim/autoload/
+dotfiles/nvim/plugged/
 examples/
 submodules/
 dotbot/
