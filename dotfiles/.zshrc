@@ -94,9 +94,8 @@ fi
 ######### Custom Configuration #########
 
 ### language
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+#export LANG=en_US.UTF-8
+#export LANGUAGE=en_US.UTF-8
 
 ### history
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:

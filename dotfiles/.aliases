@@ -12,6 +12,7 @@ alias plz="sudo"
 #
 alias uu="sudo apt-get update && sudo apt-get upgrade -y"
 alias uua="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
+alias uue="sudo snap refresh && sudo flatpak update -y --noninteractive "
 
 ### safety
 #
@@ -57,3 +58,29 @@ alias getpage="wget --no-clobber --page-requisites --html-extension --convert-li
 # file with original filename
 alias get="curl -O -L"
 alias vim="nvim"
+alias cl="clear"
+# Get tags
+function docker-tags () {
+  name=$1
+  # Initial url
+  url=https://registry.hub.docker.com/v2/repositories/$([[ $name =~ "/" ]] && echo $name || echo library/$name)/tags/
+  (
+    # Keep looping until the variable url is empty
+    while [ ! -z $url ]; do
+      # Every iteration of the loop prints out a single dot to show progress as it got through all the pages (this is inline dot)
+      >&2 echo -n "."
+      # Curl the url and pipe the output to python, python will parse the JSON and print the very first line as the next url (it will leave it blank if there is no more pages)
+      # then continue to loop over the results extracting only the name; all will be stored in a variable called content
+      content=$(curl -s $url | python3 -c 'import sys, json;
+data = json.load(sys.stdin); 
+print(data.get("next", "") or ""); 
+print("\n".join([x["name"] for x in data["results"]]))')
+      # Lets get the first line of content which contains the next url for the loop to continue
+      url=$(echo "$content" | head -n 1)
+      # Print the content without the first line (yes +2 is counter intuitive)
+      echo "$content" | tail -n +2
+    done;
+    # Finally break the line of dots
+    >&2 echo
+  ) | sort --version-sort | uniq;
+}

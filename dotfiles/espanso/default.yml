@@ -7,7 +7,7 @@ matches:
     replace: "“”"
   - trigger: ":a"
     replace: "á"
-  - trigger: ":n"
+  - trigger: ":n:"
     replace: "ñ"
   # Dates
   # - trigger: ":date"
