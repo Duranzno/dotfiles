@@ -16,6 +16,13 @@ sudo snap install gitkraken --classic
 # gitkraken_snap_path="/var/lib/snapd/desktop/applications/gitkraken_gitkraken.desktop"
 # sudo printf "\n%s" "${gitkraken_icon_path}" >>"${gitkraken_snap_path}"
 
+#Installing Github CLI
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+sudo apt update
+sudo apt install gh -y
+# Enabling Milestones
+./gh-milestones-setup.bash
 # Barrier (cross-platform keyboard-mouse network sharing)
 # sudo snap install barrier
 sudo snap install espanso --classic
@@ -31,6 +38,7 @@ firefox_developer_download_url="https://download.mozilla.org/?product=firefox-de
 firefox_developer_filename="firefox-developer-edition.tar.bz2"
 firefox_developer_destination_directory="/opt/firefox_dev"
 firefox_developer_desktop_entry_path="${HOME}/.local/share/applications/firefox_dev.desktop"
+
 
 if [[ ! -e "${firefox_developer_desktop_entry_path}" ]]; then
 	tmp_download_dir=$(mktemp -d -t 'firefox_developer_edition_XXXXXX')

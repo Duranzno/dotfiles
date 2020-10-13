@@ -59,6 +59,8 @@ alias getpage="wget --no-clobber --page-requisites --html-extension --convert-li
 alias get="curl -O -L"
 alias vim="nvim"
 alias cl="clear"
+ alias kubectl="minikube kubectl --" 
+
 # Get tags
 function docker-tags () {
   name=$1
