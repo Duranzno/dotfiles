@@ -67,6 +67,8 @@ plugins=(
 )
 
 # User configuration
+unsetopt correct_all
+
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -126,6 +128,7 @@ source_if_exists() {
 	fi
 }
 
+
 ### oh-my-zsh
 source_if_exists "$ZSH/oh-my-zsh.sh"
 
@@ -163,3 +166,9 @@ eval "$(starship init zsh)"
 
 # printf "\\n🏞  Environment Variables: \\n\\n"
 # printenv
+
+#
+export VISUAL="code"
+export EDITOR="nvim"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export RUBYOPT='-W:no-deprecated'

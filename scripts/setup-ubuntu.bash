@@ -3,7 +3,8 @@
 set -euo pipefail
 
 # install from apt
-sudo apt install git curl tar apt-transport-https gnome-tweaks -y
+sudo apt install git curl ripgrep tar apt-transport-https gnome-tweaks -y
+
 sudo apt install -y \
 	alacritty 
 # VSCode
@@ -23,6 +24,15 @@ sudo apt update
 sudo apt install gh -y
 # Enabling Milestones
 ./gh-milestones-setup.bash
+
+#Clipboard Manager
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install copyq -y
+
+#Kubernetes & Helm
+sudo snap install kubectl --classic
+sudo snap install helm --classic
 # Barrier (cross-platform keyboard-mouse network sharing)
 # sudo snap install barrier
 sudo snap install espanso --classic

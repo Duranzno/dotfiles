@@ -13,7 +13,8 @@ alias plz="sudo"
 alias uu="sudo apt-get update && sudo apt-get upgrade -y"
 alias uua="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
 alias uue="sudo snap refresh && sudo flatpak update -y --noninteractive "
-
+alias uun="yarn global upgrade"
+alias uuu="uua && uue && uun"
 ### safety
 #
 # Avoid stupidity with trash-cli: using https://github.com/sindresorhus/trash-cli
@@ -59,9 +60,14 @@ alias getpage="wget --no-clobber --page-requisites --html-extension --convert-li
 alias get="curl -O -L"
 alias vim="nvim"
 alias cl="clear"
- alias kubectl="minikube kubectl --" 
+# mkdir cd
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
 
-# Get tags
+# Get Dockertags
 function docker-tags () {
   name=$1
   # Initial url
@@ -86,3 +92,5 @@ print("\n".join([x["name"] for x in data["results"]]))')
     >&2 echo
   ) | sort --version-sort | uniq;
 }
+alias zshedit="vim ~/.zshrc"
+alias zshr="source ~/.zshrc"
