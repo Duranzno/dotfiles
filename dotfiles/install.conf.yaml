@@ -22,25 +22,33 @@
     ~/.asdfrc: .asdfrc
     ~/.gitconfig: .gitconfig
     ~/.zshrc: .zshrc
+    ~/.czrc: .czrc
     ~/.tmux.conf: .tmux.conf
     ~/.config/starship.toml: starship.toml
-# - yarn:
-#     - trash-cli
-#     - create-react-native-app
-#     - create-react-app
-#     - heroku
-#     - peerflix
-#     - vercel
-#     - gatsby
-#     - readme-md-generator
-#     - gitmoji
-#     - cypress
-
-# - espanso:
-#     - wttr
-#     - all-emojis
-#     - lorem
-#     - arrows
-#     - cht
-#     - ip
-#     - gitmojis
+- yarn:
+    - trash-cli
+    - actions-cli
+    - "@angular/cli"
+    - commitizen
+    - create-next-app
+    - create-nx-workspace
+    - pm2
+    - typescript-starter
+    - wip
+    - create-react-native-app
+    - create-react-app
+    - heroku
+    - peerflix
+    - vercel
+    - gatsby
+    - readme-md-generator
+    - gitmoji
+    # - cypress
+- espanso:
+    - wttr
+    - all-emojis
+    - lorem
+    - arrows
+    - cht
+    - ip
+    - gitmojis

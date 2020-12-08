@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
+# Extra Repositories
+sudo add-apt-repository ppa:xtradeb/play
 
 # install from apt
 sudo apt install git curl ripgrep tar apt-transport-https gnome-tweaks -y

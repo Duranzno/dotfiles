@@ -7,14 +7,15 @@ alias sudo=$'nocorrect sudo	'
 alias please="sudo"
 alias pls="sudo"
 alias plz="sudo"
-
+alias xclip="xclip -selection c"
 ### ubuntu update & upgrade
 #
 alias uu="sudo apt-get update && sudo apt-get upgrade -y"
 alias uua="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
-alias uue="sudo snap refresh && sudo flatpak update -y --noninteractive "
+alias uue="sudo snap refresh && sudo flatpak upgrade -y --noninteractive "
 alias uun="yarn global upgrade"
-alias uuu="uua && uue && uun"
+alias uud="sudo apt dist-upgrade -y"
+alias uuu="uua && uue && uun && uud"
 ### safety
 #
 # Avoid stupidity with trash-cli: using https://github.com/sindresorhus/trash-cli
