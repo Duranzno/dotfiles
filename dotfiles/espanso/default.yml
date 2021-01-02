@@ -19,6 +19,8 @@ matches:
   #         format: "%m/%d/%Y"
 
   # Shell commands
+  - trigger: ":intico"
+    replace: "duran@107.182.228.77 -p 8835"
   - trigger: ":shell"
     replace: "{{output}}"
     vars:
