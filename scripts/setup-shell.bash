@@ -5,25 +5,23 @@ set -eo pipefail
 # shellcheck source=./utils.bash
 source "$(dirname "$0")/utils.bash"
 
-# Homebrew
-# if [ -n "$MACOS" ]; then
-	if is_installed "brew"; then
-		log_success "Homebrew already installed"
-	else
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-		log_success "Brew installed successfully"
-	fi
-# fi
+# # Homebrew
+# # if [ -n "$MACOS" ]; then
+# 	if is_installed "brew"; then
+# 		log_success "Homebrew already installed"
+# 	else
+# 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# 		log_success "Brew installed successfully"
+# 	fi
+# # fi
 
 # Dependencies
 log_info "Installing dependencies"
 if [ -n "$LINUX" ]; then
-	sudo apt update -y
-	sudo apt install git curl unzip fontconfig -y
-	sudo apt install \
-		automake autoconf libreadline-dev \
-		libncurses-dev libssl-dev libyaml-dev \
-		libxslt-dev libffi-dev libtool unixodbc-dev -y
+	sudo pacman -Syyu
+	yay -S git curl unzip fontconfig -y
+	yay -S base-devel
+	yay -S nerd-fonts-complete
 elif [ -n "$MACOS" ]; then
 	brew install curl unzip
 	brew install \
@@ -38,7 +36,7 @@ log_success "Successfully installed dependencies"
 if [[ ! "$SHELL" == *"zsh"* ]]; then
 	if [ -n "$LINUX" ]; then
 		log_info "Installing ZSH"
-		sudo apt install zsh
+		sudo yay -S zsh
 	elif [ -n "$MACOS" ]; then
 		log_info "macOS Catalina comes with ZSH as the default shell."
 	else
@@ -111,5 +109,5 @@ fi
 # shellcheck source=../install.sh
 # source "$(dirname "$0")/symlink-dotfiles.bash"
 
-sudo apt install -y nodejs yarn
-log_info "🏁  Fin"
+sudo yay -S -y nodejs yarn
+"🏁  Fin"

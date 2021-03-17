@@ -43,6 +43,7 @@
     - gatsby
     - readme-md-generator
     - gitmoji
+    - cz-emoji
     # - cypress
 - espanso:
     - wttr
