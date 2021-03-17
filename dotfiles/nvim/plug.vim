@@ -17,7 +17,7 @@
     Plug 'morhetz/gruvbox'
     " Plug 'leafgarland/typescript-vim'
     Plug 'scrooloose/nerdtree'
-    Plug 'neovim/nvim-lspconfig'
+    " Plug 'neovim/nvim-lspconfig'
     " Plug 'roxma/nvim-yarp'
     " Plug 'ncm2/ncm2-path'
     " Plug 'junegunn/fzf',{'do':{->fzf#install()}}

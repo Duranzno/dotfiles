@@ -16,9 +16,9 @@
 " set modelines=10
 
 "LSP"
-lua <<EOF
-require'nvim_lsp'.tsserver.setup{}
-EOF
+" lua <<EOF
+" require'nvim_lsp'.tsserver.setup{}
+" EOF
 "" NERDTree configuration
 let g:NERDTreeChDirMode=2
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']

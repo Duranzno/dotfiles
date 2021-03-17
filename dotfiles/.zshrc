@@ -145,6 +145,7 @@ source_if_exists "$HOME/z.sh"
 ### aliases
 source_if_exists "$HOME/.aliases"
 export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 add_path_to_global_path  "$ANDROID_HOME/emulator"
 add_path_to_global_path  "$ANDROID_HOME/tools"
 add_path_to_global_path  "$ANDROID_HOME/tools/bin"
@@ -170,5 +171,6 @@ eval "$(starship init zsh)"
 #
 export VISUAL="code"
 export EDITOR="nvim"
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 export RUBYOPT='-W:no-deprecated'
+export BROWSER=/usr/bin/chromium
